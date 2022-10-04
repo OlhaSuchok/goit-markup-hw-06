@@ -806,6 +806,8 @@ color: #FFFFFF;
   letter-spacing: 0.03em;
 }
 
+
+
 .form-modal {
   display: flex;
   flex-direction: column;
@@ -813,29 +815,45 @@ color: #FFFFFF;
   padding: 40px;
 }
 
-.form-modal [type="text"],
-.form-modal [type="tel"],
-.form-modal [type="email"] {
+.field {
+  position: relative;
   width: 100%;
-  margin-bottom: 10px;
-  padding: 12px 15px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 }
 
-.form-modal [type="text"]:hover,
-.form-modal [type="text"]:focus,
-.form-modal [type="tel"]:hover,
-.form-modal [type="tel"]:focus,
-.form-modal [type="email"]:hover,
-.form-modal [type="email"]:focus {
+.field-icon {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  padding-right: 0;
+}
+
+.field-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-top: 12px;
+  padding-left: 40px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+}
+
+.field-input:hover,
+.field-input:focus {
   border-color: var(--nav-color);
 }
 
-.form-modal [for="name"],
-.form-modal [for="phone"],
-.form-modal [for="mail"],
-.form-modal [for="comment"] {
+.lable {
+  display: block;
+}
+
+.form-modal label {
+  margin-bottom: 4px;
+}
+
+.lable-text {
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 12px;
@@ -844,7 +862,6 @@ color: #FFFFFF;
   letter-spacing: 0.01em;
   color:  var(--secondary-color);
 }
-
 
 textarea {
   width: 100%;
@@ -857,11 +874,6 @@ textarea {
 textarea:hover,
 textarea:focus {
   border-color: var(--nav-color);
-}
-
-
-.form-modal label {
-  margin-bottom: 4px;
 }
 
 textarea {
@@ -883,6 +895,8 @@ textarea {
 }
 
 .button-modal {
+  display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 32px;
@@ -897,44 +911,20 @@ textarea {
   letter-spacing: 0.06em;
 }
 
-.checkbox {
+.privecy-wrapp {
   display: flex;
-  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 14px;
+  border: 1px solid;
+  border-radius: 2px;
 }
 
-.checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 1px;
-  bottom: 0;
-  padding: 0;
-  clip:rect(0 0 0 0);
-  overflow: hidden;
+.privecy-input:checked + .privecy-wrapp {
+  border-color: transparent;
 }
 
-
-.checkbox-mark {
-  width: 16px;
-  height: 15px;
-  margin-bottom: 0;
-  padding: 0;
-  margin: 0; 
-}
-
-.checkbox-label {
-  padding: 0;
-  margin: 0; 
-}
-
-
-
-textarea::placeholder {
-  font-family: var(--main-font);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  text-align: left;
-  letter-spacing: 0.01em;
-  color:  rgba(117, 117, 117, 0.5);
+.privecy-input:checked + .privecy-wrapp .privecy-icon {
+  opacity: 1;
 }
