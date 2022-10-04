@@ -8,18 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-    <!--Page header-->
     <header class="header">
     <div class="container">
 <a class="logo" href="index.html"><span class="logotype" >Web</span>Studio</a>
 <nav class="site-nav">
-<ul class="list nav">
-    <li><a class="link studio current" href="index.html">Студія</a></li>
-    <li><a class="link portfolio" href="./portfolio.html">Портфоліо</a></li>
-    <li><a class="link contacts" href="#">Контакти</a></li>
-</ul> 
+    <a class="link studio current" href="index.html">Студія</a></li>
+    <a class="link portfolio" href="./portfolio.html">Портфоліо</a></li>
+    <a class="link contacts" href="#">Контакти</a></li>
 </nav>
 
 <ul class="list auth-nav">
@@ -71,7 +66,7 @@
 
     <div class="field">
         <input class="field-input" type="text" name="name" required id="input-name">
-        <svg class="field-icon"width="18" height="18">
+        <svg class="field-icon"width="12" height="12">
             <use href="./images/icons.svg#icon-input-mail"></use>
         </svg>
     </div>
@@ -82,7 +77,7 @@
 
     <div class="field">
         <input class="field-input" type="text" name="phone" required id="input-phone">
-        <svg class="field-icon"width="18" height="18">
+        <svg class="field-icon"width="13" height="13">
             <use href="./images/icons.svg#icon-input-phone"></use>
         </svg>
     </div>
@@ -93,28 +88,32 @@
 
     <div class="field">
         <input class="field-input" type="text" name="mail" required id="input-mail">
-        <svg class="field-icon"width="18" height="18">
+        <svg class="field-icon"width="15" height="12">
             <use href="./images/icons.svg#icon-input-name"></use>
         </svg>
     </div>
 
-    <label for="comment">
+    <label class="lable" for="lable" for="message">
         <span class="lable-text">Коментар</span>
     </label>
-    <textarea class="" name="comment" id="comment" placeholder="Введіть текст"></textarea>
+    <textarea class="message input" name="comment" id="message" placeholder="Введіть текст"></textarea>
 
+        <label class="privacy">
+            <input class="privacy-input hide" type="checkbox" name="privacy"/>
 
-    <label class="privecy">
-<input class="privecy-input hidden" type="checkbox" name="privecy">
-    <span class="privecy-wrapp">
-    <svg class="privecy-icon" width="16" height="15">
-        <use href="./images/icons.svg#icon-check"></use>
-    </svg>
-    </span>
-<span class="privecy-text">Погоджуюся з розсилкою та приймаю <a class="privecy-link"href="#">Умови договору</a></span>
-    </label>
+            <span class="privacy-wrapp">
+              <svg class="privacy-icon" width="11" height="8">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </span>
 
-    <button class="button-modal" type="submit">Відправити</button>
+            <span class="privacy-text">
+              Погоджуюся з розсилкою та приймаю
+              <a class="privacy-link" href="#">Умови договору</a>
+            </span>
+        </label>    
+
+    <button class="button-modal button" type="submit">Відправити</button>
 
 </form>
 
