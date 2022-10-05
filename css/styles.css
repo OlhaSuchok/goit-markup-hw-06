@@ -920,15 +920,6 @@ color: #FFFFFF;
   position: relative;
   width: 100%;
   margin-bottom: 10px;
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.field:hover,
-.field:focus  {
-  fill: #2196f3;
 }
 
 .field-input {
@@ -940,6 +931,7 @@ color: #FFFFFF;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -955,6 +947,15 @@ color: #FFFFFF;
   top: 14px;
   left: 15px;
   padding-right: 0;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field-input:hover + .field-icon,
+.field-input:focus + .field-icon {
+  fill: #2196f3;
 }
 
 .lable-text {
@@ -977,6 +978,15 @@ color: #FFFFFF;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.message:hover,
+.message:focus {
+  border-color: var(--nav-color);
 }
 
 .message::placeholder {
@@ -987,11 +997,6 @@ color: #FFFFFF;
   line-height: 1.17;
   text-align: left;
   letter-spacing: 0.01em;
-}
-
-.message:hover,
-.message:focus {
-  border-color: var(--nav-color);
 }
 
 .button-modal {
